@@ -3,6 +3,7 @@
 ## Wallpaper (Jojos)
 https://wallhaven.cc/w/o5lyd9
 https://wallhaven.cc/w/g75kod
+https://wallhaven.cc/w/95mdgx
 
 ## Terminal
 ![imagen](https://github.com/user-attachments/assets/7b05be06-5260-4f1a-8d82-7ecb9ab21236)
