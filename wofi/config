@@ -1,0 +1,9 @@
+show = drun
+term = kitty
+location = top
+width = 30%
+height = 30%
+no_actions = true
+prompt = Run:
+allow_images = true
+hide_scroll = true
