@@ -1,33 +1,42 @@
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 window {
   background-color: #111013;
   border: 2px solid #b43737;
   border-radius: 10px;
-  padding: 16px;
+  padding: 10px;
 }
 
+/* Input reducido */
 #input {
   background-color: #2b0307;
   color: #ffffff;
   border: none;
-  padding: 8px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  padding: 6px 8px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-size: 13px;
 }
 
 #input:focus {
-  border: 2px solid #8b1e1e;
+  border: 1px solid #8b1e1e;
 }
 
+/* Caja interna */
+#inner-box {
+  margin-top: 4px;
+}
+
+/* Entries compactos */
 #entry {
   padding: 6px;
-  margin: 2px;
-  border-radius: 5px;
+  margin: 4px;
+  border-radius: 6px;
   color: #ffffff;
+  background-color: transparent;
 }
 
 #entry:selected {
@@ -35,10 +44,11 @@ window {
   color: #ffffff;
 }
 
-#scroll {
-  margin-top: 5px;
+#img {
+  padding-right: 6px;
 }
 
-#img {
-  padding-right: 8px;
+#text {
+  margin-left: 2px;
+  font-size: 13px;
 }
