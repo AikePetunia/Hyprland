@@ -1,83 +1,77 @@
-// -*- mode: json -*-
-
 {
-	"layer": "top",
-	"position": "top",
+  "layer": "top",
+  "position": "top",
+  "reload_style_on_change": true,
 
-	"modules-left": [
-		"sway/workspaces", 
-	],
-	"modules-center": [
-		"clock#1",
-		"clock#2",
-		"clock#3"
-	],
-	"modules-right": [
-		"pulseaudio",
-		"memory",
-		"cpu",
-		"temperature",
-		"tray",
-		"mpris"
-	],
-	"sway/workspaces": {
-		"disable-scroll": true,
-		"all-outputs": true,
-		"format": "{name}: {icon}",
-		"format-icons": {
-			"1": "1",
-			"2": "2",
-			"3": "3",
-			"4": "4",
-			"5": "5",
-			"high-priority-named": ["1", "2"]
-    	},
-	},
-	"clock#1": {
-		"format": "{:%a}",
-		"tooltip": false
-	},
-	"clock#2": {
-		"format": "{:%H:%M}",
-		"tooltip": false
-	},
-	"clock#3": {
-		"format": "{:%m-%d}",
-		"tooltip": false
-	},
-	"pulseaudio": {
-		"format": "{icon} {volume:2}%",
-		"format-muted": "MUTE",
-		"format-icons": {
-			"default": " ",
-		},
-		"scroll-step": 5,
-		"on-click": "pamixer -t",
-		"on-click-right": "pavucontrol"
-	},
-	"memory": {
-		"interval": 1,
-		"format": "  {used:0.1f}G/{total:0.1f}G"
-	},
-	"cpu": {
-		"format": "  {usage}%",
+  "modules-left": ["custom/notification", "clock", "tray"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "battery",
+    "cpu",
+    "gpu",
+    "memory",
+    "temperature",
+    "mpris"
+  ],
 
-		"interval": 1,
-	},
-	"tray": {
-		"icon-size": 16
-	},
-	"mpris": {
-		"format": "{player_icon} {artist} - {title} [{length}]",
-		"max-length": 50,
-		"on-click": "playerctl play-pause"
-	},
-	"temperature": {
-        "thermal-zone": 2,
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C",
-        "format": "{temperatureC}°C",
-        "format-icons": ["", "", ""]
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "empty": ""
+    },
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5]
     }
+  },
+  "clock": {
+    "format": "{:%I:%M:%S %p} ",
+    "interval": 1,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#fAfBfC'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "shift_down",
+      "on-click": "shift_up"
+    }
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol"
+  },
+  "cpu": {
+    "format": "󰻠  {usage}%",
+    "tooltip": true
+  },
+  "memory": {
+    "format": "RAM {percentage}%",
+    "tooltip": true
+  },
+  "mpris": {
+    "format": "{player_icon} - {artist} - {title}",
+    "format-paused": "⏸ {artist} - {title}",
+    "format-stopped": "",
+    "max-length": 40,
+    "player-icons": {
+      "default": "",
+      "spotify": "",
+      "firefox": ""
+    }
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10
+  }
 }
