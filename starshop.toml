@@ -1,0 +1,80 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](#510804)\
+$os\
+$username\
+[](bg:#6b1515 fg:#510804)\
+$directory\
+[](fg:#6b1515 bg:#8b1e1e)\
+$git_branch\
+$git_status\
+[](fg:#8b1e1e bg:#b43737)\
+$c\
+$nodejs\
+$rust\
+[](fg:#b43737 bg:#d44d4d)\
+$docker_context\
+[](fg:#d44d4d bg:#8e2020)\
+$time\
+[ ](fg:#8e2020)\
+"""
+
+# [username]
+[username]
+show_always = true
+style_user = "bg:#510804 fg:#ffffff"
+style_root = "bg:#510804 fg:#ffffff"
+format = '[$user ]($style)'
+disabled = false
+
+[os]
+style = "bg:#510804 fg:#ffffff"
+disabled = true
+
+[directory]
+style = "bg:#6b1515 fg:#ffffff"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#8b1e1e fg:#ffffff"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:#8b1e1e fg:#ffffff"
+format = "[$all_status$ahead_behind ]($style)"
+
+[c]
+symbol = " "
+style = "bg:#b43737 fg:#ffffff"
+format = "[ $symbol ($version) ]($style)"
+
+[nodejs]
+symbol = ""
+style = "bg:#b43737 fg:#ffffff"
+format = "[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = ""
+style = "bg:#b43737 fg:#ffffff"
+format = "[ $symbol ($version) ]($style)"
+
+[docker_context]
+symbol = " "
+style = "bg:#d44d4d fg:#ffffff"
+format = "[ $symbol $context ]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#8e2020 fg:#ffffff"
+format = "[ ♡ $time ]($style)"
