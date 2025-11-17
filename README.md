@@ -1,4 +1,4 @@
-# My hyprland config.
+# dot files
 
 <img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/cc304943-03b5-4e7d-bcfd-ff0bc502d6a0" />
 
