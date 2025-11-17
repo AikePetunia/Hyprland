@@ -4,8 +4,7 @@
 
 ## Wallpaper 
 [https://wallhaven.cc/w/g75kod](https://w.wallhaven.cc/full/g7/wallhaven-g75kod.png) (main)
-[
-https://wallhaven.cc/w/o5lyd9](https://w.wallhaven.cc/full/o5/wallhaven-o5lyd9.jpg)
+[https://wallhaven.cc/w/o5lyd9](https://w.wallhaven.cc/full/o5/wallhaven-o5lyd9.jpg)
 [https://wallhaven.cc/w/rr2mzj](https://w.wallhaven.cc/full/rr/wallhaven-rr2mzj.png)
 [https://wallhaven.cc/w/j3wjmy](https://w.wallhaven.cc/full/j3/wallhaven-j3wjmy.png)
 
